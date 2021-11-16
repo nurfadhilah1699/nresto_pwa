@@ -1,0 +1,97 @@
+.katalogList {
+    display: grid;
+	grid-row-gap: 16px;
+}
+
+@media screen and (max-width: 499px) {
+    .navbar {
+        display: none;
+    }
+
+    .navMobile {
+        background-color: #548CA8;
+        width: 100%;
+        align-items: center;
+        position: absolute;
+        -webkit-transform: translate(-100%, 0);
+		transform: translate(-100%, 0);
+        transition: transform 0.6s ease;
+        z-index: 10;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .navItemMobile {
+        display: list-item;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .brandMenu {
+        display: none;
+    }
+
+    .navMobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 650px) {
+	.katalogItemContent {
+		padding: 16px 32px 32px 32px
+	}
+	.katalogItemName {
+		font-size: 18px
+	}
+	.katalogItemDescription {
+		font-size: 14px
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.katalogList {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 10px;
+		grid-row-gap: 16px
+	}
+}
+
+@media screen and (min-width: 850px){
+	.restoDetail {
+    padding: 25px 100px;
+  }
+ 
+  .restoDetail .kategori {
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    gap: 100px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+	.restoDetail .reviewCard {
+    height: 250px;
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+	.katalogList {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+}

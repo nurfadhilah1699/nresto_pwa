@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Cardo', serif;
+    font-size: 13px;
+}
+
+
+/* Navigation mobile version */
+.brandMenu {
+    background-color: #334257;
+    color: #eeeeee;
+    width: 100%;
+    padding: 11px;
+    display: flex;
+    font-weight: 500;
+    font-size: 22px;
+    justify-content: space-between;
+}
+
+.brandMenu .menuToggle button {
+    border: none;
+	background: none;
+    font-size: 28px;
+    color: #eeeeee;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.brandMenu .brandMobile {
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 1px;
+} 
+
+.navMobile {
+    background-color: #334257;
+    width: 100%;
+    display: flex;
+    font-weight: 550;
+    font-size: 15px;
+    text-transform: uppercase;;
+}
+
+.navListMobile {
+    width: 100%;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+}
+
+.navItemMobile {
+    box-sizing: border-box;
+	display: inline-block;
+	text-align: right;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+.navMobile a {
+    color: #eeeeee;
+    text-decoration: none;
+    padding: 1.5em;
+    display: inline-block;
+}
+
+/* Navigation Desktop Version */
+.navbar {
+    background-color: #334257;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 550;
+    font-size: 13px;
+}
+
+.navbar a {
+    color: #eeeeee;
+    padding: 1.3em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.brand {
+    width: 20%;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 24px;
+    font-size: 22px;
+    font-family: 'Pacifico', cursive;
+}
+
+.navList {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.navItem {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: right;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.navbar .navList .navItem a:hover {
+    font-weight: bold;
+    text-shadow: 2px 2px 10px #548CA8;
+}
+
+/* Hero / Jumbotron */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+    text-align: center;
+    background-position: center;
+    background-color: blueviolet;
+}
+
+.heroInner {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.heroTitle {
+    color: #eeeeee;
+    font-weight: 600;
+    font-size: 36px;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px black;
+}
+
+.heroSubtitle {
+    color: #eeeeee;
+    margin-top: 14px;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-style: oblique;
+	text-shadow: 1px 1px #141414;
+}
+
+main {
+	width: 100%;
+	margin: 0 auto
+}
+
+.content {
+	padding: 32px
+}
+
+.latest {
+	width: 100%;
+	margin-top: 25px;
+	margin-bottom: 60px;
+	text-align: center;
+	text-shadow: 1px 1px #eeeeee;
+}
+
+.latestLabel {
+	font-size: 34px;
+	margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.katalogList {
+	margin: 32px auto auto;
+	text-align: left;
+}
+.katalogItem {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	width: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+.ratingResto {
+	position: absolute;
+	top: 10px;
+	right: 16px;
+    font-size: 14px;
+	border-radius: 5px;
+	background-color: #334257;
+	color: #eeeeee;
+    padding: 5px;
+	font-weight: 500;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.katalogItemContent {
+	padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.katalogItemThumbnail {
+	width: 100%;
+    max-height: 230px;
+}
+
+.locationResto {
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #eeeeee;
+    text-shadow: 1px 0px black;
+	font-weight: bold;
+    background-color: #334257;
+    padding: 5px;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+
+.ratingNumber {
+	color: orange;
+    font-size: 12px;
+}
+
+.katalogItemName {
+	font-weight: 500;
+	font-size: 16px;
+	margin-top: 8px;
+	transition: 0.3s opacity;
+    text-transform: capitalize;
+    height: 45px;
+}
+
+.katalogItemName:hover {
+	opacity: 0.8;
+}
+
+.katalogItemName a {
+	text-decoration: none;
+	color: inherit;
+}
+.katalogItemDescription {
+	font-size: 12px;
+	line-height: 1.5em;
+}
+
+footer {
+	background-color: #334257;
+	color: #eeeeee;
+	font-size: 14px;
+	padding: 2em;
+	width: 100%;
+	text-align: center
+}
+
+.skipLink {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    background-color: #ecb80c;
+    color: black;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.skipLink:focus {
+    top: 0;
+}
+
+.katalogItemDescription + .ratingResto:focus {
+	outline: 2px solid black;
+    border-radius: 5px;
+}
+
+.ratingResto,
+.katalogItemName > a {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.katalogItemName > a {
+    padding-top: 23px;
+    padding-bottom: 23px;
+} 
+
+.katalogItemName:focus {
+    padding-top: -23px;
+}
+
+/* Detail page */
+.restoDetail {
+    padding: 20px 32px;
+}
+
+.restoDetail .restoImg {
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    border-radius: 3%;
+}
+
+.restoDetail .restoTitle {
+    color: #334257;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.restoDetail .restoInfo h3,
+.restoDetail .restoInfo p {
+    font-size: 15px;
+    color: black;
+    text-align: justify;
+}
+
+.restoDetail .restoInfo h3 {
+    margin: 8px 0;
+    color: #334257;
+    font-size: 18px;
+}
+
+.kategoriMenu ul, .kategoriMakanan ul, .kategoriMinuman ul {
+    padding-left: 20px;
+}
+
+.kategoriRating p {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.restoDetail .restoInfo li {
+    list-style: decimal;
+    color: black;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.restoDetail .review {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.restoDetail .reviewCard {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #334257;
+    margin: 10px auto;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.restoDetail .reviewCard p {
+    color: #334257;
+}
+
+.restoDetail .reviewCard i {
+    text-align: center;
+    font-size: 3rem;
+    color: #476072;
+}
+
+.restoDetail .reviewCard .reviewName {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.restoDetail .reviewCard .reviewComment {
+    font-size: 15px;
+    color: black;
+}
+
+.restoDetail .reviewCard .reviewDate {
+    font-size: 13px;
+    text-align: center;
+}
+
+.customerReview {
+    color: #334257;
+    font-size: 18px;
+}
+
+.restoInfo .restoOverview h3 {
+    color: #334257;
+}
+
+.restoInfo .restoOverview p {
+    color: #000000;
+}
+
+/* Like */
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #334257;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
