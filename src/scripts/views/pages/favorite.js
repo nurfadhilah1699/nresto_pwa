@@ -18,9 +18,6 @@ const Favorite = {
   async afterRender() {
     const katalogs = await FavoriteRestoIdb.getAllRestos();
     const katalogsContainer = document.querySelector('#katalogList');
-    // katalogs.forEach((katalog) => {
-    //   katalogsContainer.innerHTML += createRestoItemTemplate(katalog);
-    // });
     if (katalogs.length > 0) {
       katalogs.map((katalog) => {
         console.log(katalog.name);
