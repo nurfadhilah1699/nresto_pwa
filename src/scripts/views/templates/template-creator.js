@@ -97,7 +97,7 @@ const createLikedButtonTemplate = () => `
 `;
 
 const createEmptyFavorite = () => `
-    <h3 class="emptyFavorite">Favorite restaurant masih kosong</h3>
+    <h3 class="emptyFavorite">Favorite restaurant kosong!</h3>
 `;
 
 export {
