@@ -1,5 +1,5 @@
 import FavoriteRestoIdb from '../../data/favoriteresto-idb';
-import { createRestoItemTemplate } from '../templates/template-creator';
+import { createEmptyFavorite, createRestoItemTemplate } from '../templates/template-creator';
 
 const Favorite = {
   async render() {
@@ -18,9 +18,17 @@ const Favorite = {
   async afterRender() {
     const katalogs = await FavoriteRestoIdb.getAllRestos();
     const katalogsContainer = document.querySelector('#katalogList');
-    katalogs.forEach((katalog) => {
-      katalogsContainer.innerHTML += createRestoItemTemplate(katalog);
-    });
+    // katalogs.forEach((katalog) => {
+    //   katalogsContainer.innerHTML += createRestoItemTemplate(katalog);
+    // });
+    if (katalogs.length > 0) {
+      katalogs.map((katalog) => {
+        console.log(katalog.name);
+        katalogsContainer.innerHTML += createRestoItemTemplate(katalog);
+      });
+    } else {
+      katalogsContainer.innerHTML += createEmptyFavorite();
+    }
   },
 };
 

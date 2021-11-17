@@ -18,6 +18,7 @@
         "no-underscore-dangle": "off",
         "no-restricted-globals": "off",
         "no-useless-return": "off",
-        "func-names": "off"
+        "func-names": "off",
+        "array-callback-return": "off"
     }
 }

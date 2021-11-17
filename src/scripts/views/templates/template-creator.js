@@ -96,9 +96,16 @@ const createLikedButtonTemplate = () => `
     </button>
 `;
 
+const createEmptyFavorite = () => `
+    <div class="emptyFavorite">
+        <p>Favorite restaurant masih kosong</p>
+    </div>
+`;
+
 export {
   createRestoDetailTemplate,
   createRestoItemTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
+  createEmptyFavorite,
 };

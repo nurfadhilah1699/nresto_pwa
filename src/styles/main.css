@@ -436,5 +436,15 @@ footer {
     justify-content: center;
 }
 
+.emptyFavorite {
+    color: white;
+    display: flex;
+    width: 80%;
+    height: 100px;
+    background-color: #334257;
+    justify-content: center;
+    align-items: center;
+  }
+
 
 
