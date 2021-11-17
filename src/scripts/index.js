@@ -20,3 +20,9 @@ window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
 });
+
+const skipLinkElem = document.querySelector('.skipLink');
+skipLinkElem.addEventListener('click', (event) => {
+  event.preventDefault();
+  document.querySelector('#mainContent').focus();
+});
