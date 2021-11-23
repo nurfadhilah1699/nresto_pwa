@@ -1,56 +1,57 @@
 const assert = require('assert');
 
-Feature('Liking Restos');
+Feature('Favorite Restos');
 
+// Perintah berjalan sebelum tiap metode tes dijalankan
 Before(({ I }) => {
   I.amOnPage('/#/favorite');
 });
 
-Scenario('liking one resto', async ({ I }) => {
+const emptyFavoriteRestoText = 'Favorite restaurant kosong!';
+
+Scenario('showing empty favorite restaurant', ({ I }) => {
   I.seeElement('#katalogList');
-  I.see('Favorite resto still empty', '.emptyFavorite');
-
-  I.amOnPage('/');
-  I.seeElement('.katalogItemName a');
-  const firstResto = locate('.katalogItemName a').first();
-  const firstRestoTitle = await I.grabTextFrom(firstResto);
-  I.click(firstResto);
-
-  I.seeElement('#likeButton');
-  I.click('#likeButton');
-
-  I.amOnPage('/#/favorite');
-  I.seeElement('.katalogList');
-  const likedRestaurantTitle = await I.grabTextFrom('.katalogItemName');
-
-  assert.strictEqual(firstRestoTitle, likedRestaurantTitle);
+  I.see(emptyFavoriteRestoText, '#katalogList');
 });
 
-Scenario('unliking one resto', async ({ I }) => {
-  // menuju page home untuk melakukan like terlebih dahulu
+Scenario('liking one restaurant', async ({ I }) => {
+  I.see(emptyFavoriteRestoText, '#katalogList');
+
+  // URL: /
   I.amOnPage('/');
   I.seeElement('.katalogItemName a');
-  I.click(locate('.katalogItemName a').first());
+  const firstRestoCard = locate('.katalogItemName a').first();
+  const firstRestoCardTitle = await I.grabTextFrom(firstRestoCard);
+  I.click(firstRestoCard);
 
+  // URL: /resto/:id
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
-  // menuju page favorite
+  // URL: /#/favorite
   I.amOnPage('/#/favorite');
-  I.seeElement('.katalogItemName a');
-  const firstLikedRestaurant = locate('.katalogItemName a').first();
-  const firstLikedRestaurantTitle = await I.grabTextFrom(firstLikedRestaurant);
-  I.click(firstLikedRestaurant);
+  I.seeElement('.katalogItem');
+  const likedCardTitle = await I.grabTextFrom('.katalogItemName');
+  assert.strictEqual(firstRestoCardTitle, likedCardTitle); // membandingkan
+});
 
-  // menuju page detail untuk melakukan unlike
-  I.seeElement('.restoTitle');
-  const likedRestaurantTitle = await I.grabTextFrom('.restoTitle');
-  assert.strictEqual(firstLikedRestaurantTitle, likedRestaurantTitle);
+Scenario('unliking one restaurant', async ({ I }) => {
+  I.see(emptyFavoriteRestoText, '#katalogList');
 
-  I.seeElement('[aria-label="unlike this resto"]');
-  I.click('[aria-label="unlike this resto"]');
+ // URL: /
+ I.amOnPage('/');
+ I.seeElement('.katalogItemName a');
+ const firstRestoCard = locate('.katalogItemName a').first();
+ const firstRestoCardTitle = await I.grabTextFrom(firstRestoCard);
+ I.click(firstRestoCard);
 
-  // menuju page favorit untuk memastikan berhasil melakukan unlike
-  I.amOnPage('/#/favorite');
-  I.see('Favorite resto still empty', '.emptyFavorite');
+ // URL: /resto/:id
+ I.seeElement('#likeButton');
+ I.click('#likeButton');
+
+ // URL: /#/favorite
+ I.amOnPage('/#/favorite');
+ I.dontSee('.katalogItem');
+ const likedCardTitle = await I.grabTextFrom('.katalogItemName');
+ assert.strictEqual(firstRestoCardTitle, likedCardTitle);
 });
