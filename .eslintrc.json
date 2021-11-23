@@ -23,6 +23,7 @@
         "no-undef": "off",
         "consistent-return": "off",
         "no-prototype-builtins": "off",
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "no-return-assign": "off"
     }
 }
