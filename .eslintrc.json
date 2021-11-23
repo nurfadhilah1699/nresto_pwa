@@ -22,6 +22,7 @@
         "array-callback-return": "off",
         "no-undef": "off",
         "consistent-return": "off",
-        "no-prototype-builtins": "off"
+        "no-prototype-builtins": "off",
+        "import/prefer-default-export": "off"
     }
 }
