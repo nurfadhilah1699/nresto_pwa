@@ -66,7 +66,7 @@ describe('Liking A Resto', () => {
   });
 
   // menggunakan metode xit, bukan it
-  xit('should not add a resto when it has no id', async () => {
+  it('should not add a resto when it has no id', async () => {
     await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: {},

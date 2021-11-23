@@ -20,6 +20,8 @@
         "no-useless-return": "off",
         "func-names": "off",
         "array-callback-return": "off",
-        "no-undef": "off"
+        "no-undef": "off",
+        "consistent-return": "off",
+        "no-prototype-builtins": "off"
     }
 }
