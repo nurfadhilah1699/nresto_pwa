@@ -7,16 +7,15 @@
         "codeceptjs/codeceptjs": true
     },
     "extends": [
-        "airbnb-base",
-        "plugin:codeceptjs/recommended"
+        "airbnb-base"
     ],
     "parserOptions": {
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-
-    "plugins": ["jasmine", "codeceptjs"],
-
+    "plugins": [
+        "codeceptjs", "jasmine"
+    ],
     "rules": {
         "no-console": "off",
         "no-unused-vars": "off",
@@ -30,6 +29,7 @@
         "consistent-return": "off",
         "no-prototype-builtins": "off",
         "import/prefer-default-export": "off",
-        "no-return-assign": "off"
+        "no-return-assign": "off",
+        "codeceptjs/no-actor-in-scenario": 2
     }
 }
