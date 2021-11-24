@@ -11,6 +11,13 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(CacheHelper.deleteOldCache());
 });
 
+// self.addEventListener('fetch', (event) => {
+//   event.respondWith(CacheHelper.revalidateCache(event.request));
+// });
 self.addEventListener('fetch', (event) => {
-  event.respondWith(CacheHelper.revalidateCache(event.request));
+  if (event.request.method === 'POST') {
+    event.respondWith(fetch(event.request));
+  } else {
+    event.respondWith(CacheHelper.revalidateCache(event.request.url));
+  }
 });
