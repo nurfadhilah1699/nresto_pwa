@@ -134,7 +134,7 @@ body {
     text-align: center;
     background-position: center;
     background-color: blueviolet;
-    background-image: linear-gradient(rgba(0, 0, 6, 0.6), rgba(0, 0, 6, 0.6)), url('/images/heros/hero-image_4-large.jpg');
+    background-image: linear-gradient(rgba(0, 0, 6, 0.6), rgba(0, 0, 6, 0.6)), url('../public/images/heros/hero-image_4-large.jpg');
 }
 
 .heroInner {

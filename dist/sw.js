@@ -1,5 +1,7 @@
 var serviceWorkerOption = {
   "assets": [
+    "/300d0e8024a677557bbca093d039028b.jpg",
+    "/dd53fd56dbe206d8e123de74984e41fd.jpg",
     "/0.bundle.js",
     "/1.bundle.js",
     "/bundle.js",
@@ -13,6 +15,18 @@ var serviceWorkerOption = {
     "/icon/icon512x512.png",
     "/icon/icon72x72.png",
     "/icon/icon96x96.png",
+    "/images/heros/hero-image_1-large.jpg",
+    "/images/heros/hero-image_1-small.jpg",
+    "/images/heros/hero-image_1.jpg",
+    "/images/heros/hero-image_2-large.jpg",
+    "/images/heros/hero-image_2-small.jpg",
+    "/images/heros/hero-image_2.jpg",
+    "/images/heros/hero-image_3-large.jpg",
+    "/images/heros/hero-image_3-small.jpg",
+    "/images/heros/hero-image_3.jpg",
+    "/images/heros/hero-image_4-large.jpg",
+    "/images/heros/hero-image_4-small.jpg",
+    "/images/heros/hero-image_4.jpg",
     "/index.html"
   ]
 };
