@@ -1,4 +1,6 @@
 import CONFIG from '../../globals/config';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createRestoDetailTemplate = (detail) => `
     <h2 class="restoTitle">${detail.restaurant.name}</h2>
@@ -74,7 +76,7 @@ const createRestoDetailTemplate = (detail) => `
 
 const createRestoItemTemplate = (resto) => `
         <article class="katalogItem">
-            <img class="katalogItemThumbnail" src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL + resto.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="${resto.name}">
+            <img class="katalogItemThumbnail lazyload" data-src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL + resto.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="${resto.name}">
             <div class="ratingResto" tabindex="0">⭐️ ${resto.rating}</div>
             <div class="katalogItemContent">
                 <p class="locationResto">${resto.city}</p>

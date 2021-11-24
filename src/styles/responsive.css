@@ -3,7 +3,7 @@
 	grid-row-gap: 16px;
 }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 649px) {
     .navbar {
         display: none;
     }
@@ -29,9 +29,15 @@
         width: 100%;
         text-align: center;
     }
+
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 6, 0.6), rgba(0, 0, 6, 0.6)), url('/src/public/images/heros/hero-image_4-small.jpg');
+        background-size: cover;
+        background-position: center;
+      }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
     .brandMenu {
         display: none;
     }
@@ -39,18 +45,7 @@
     .navMobile {
         display: none;
     }
-}
 
-@media screen and (max-width: 649px) {
-    .hero {
-        background-image: linear-gradient(rgba(0, 0, 6, 0.6), rgba(0, 0, 6, 0.6)), url('/src/public/images/heros/hero-image_4-small.jpg');
-        background-size: cover;
-        background-position: center;
-        min-height: 200px;
-      }
-}
-
-@media screen and (min-width: 650px) {
 	.katalogItemContent {
 		padding: 16px 32px 32px 32px
 	}
@@ -64,6 +59,7 @@
     .hero {
         background-image: linear-gradient(rgba(0, 0, 6, 0.6), rgba(0, 0, 6, 0.6)), url('/src/public/images/heros/hero-image_4-large.jpg');
         background-position: center;
+        background-size: cover;
     }
 }
 
