@@ -41,6 +41,15 @@
     }
 }
 
+@media screen and (max-width: 649px) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 6, 0.6), rgba(0, 0, 6, 0.6)), url('/src/public/images/heros/hero-image_4-small.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 200px;
+      }
+}
+
 @media screen and (min-width: 650px) {
 	.katalogItemContent {
 		padding: 16px 32px 32px 32px
@@ -51,6 +60,11 @@
 	.katalogItemDescription {
 		font-size: 14px
 	}
+
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 6, 0.6), rgba(0, 0, 6, 0.6)), url('/src/public/images/heros/hero-image_4-large.jpg');
+        background-position: center;
+    }
 }
 
 @media screen and (min-width: 700px) {
